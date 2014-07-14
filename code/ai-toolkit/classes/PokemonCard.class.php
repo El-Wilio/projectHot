@@ -33,7 +33,7 @@ class PokemonCard extends Card {
     public function setWeakness(array $weakness) {
         if(is_null($weakness)) return 0;
 
-        if($weakness[0] < 0 && $weakness[0] > 9) {
+        if(!EnergyType.isValid($weakness[0])) {
             //out of the energy bound defined in EnergyType.php, should throw error here
         }
 
@@ -47,7 +47,7 @@ class PokemonCard extends Card {
     public function setResistance(array $resistance) {
         if(is_null($resistance)) return 0;
 
-        if($resistance[0] < 0 && $resistance[0] > 9) {
+        if(!EnergyType.isValid($weakness[0])) {
             //out of the energy bound defined in EnergyType.php, should throw error here
         }
 
