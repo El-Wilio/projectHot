@@ -6,8 +6,9 @@ include 'EnergyType.ENUM.php';
 abstract class Card {
 	//attributes
 
-    private $id;
+    private $id; //unneededd for the toolkit. That's specific to the database.
     private $name;
+	//Missing: Set, set number, rarity
 	
 	function __construct($id, string $name) {
 	    $this->$format = $format;

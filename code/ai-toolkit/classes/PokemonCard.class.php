@@ -10,6 +10,8 @@ class PokemonCard extends Card {
     private $weakness = SplFixedArray(2); //first value is type, second is modifier
     private $resistance = SplFixedArray(2); //first value is type, second is modifier
     private $attacks = array(); 
+	//Missing retreat, IsEX, IsMega, customModifier (like Plasma, Rocket, owner, etc),  Evolves from, Evolution stage, height, weight, and attachedCards
+	
 
     //constructor
 
@@ -57,7 +59,7 @@ class PokemonCard extends Card {
     }
 
     public function setAttack(Attack $attack) {
-        $this->$attack.push($attack);
+        $this->$attack.push($attack); //That's not how you array push :P array_push($array, $item)
     }
 
 }
