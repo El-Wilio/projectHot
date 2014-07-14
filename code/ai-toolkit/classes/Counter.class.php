@@ -16,10 +16,10 @@
  ***************************************************************************************/
 class Counter {
 	//attributes
+	var $counterType;
 	
-	
-	function __construct() {
-		
+	function __construct($type) {
+		$this->counterType = $type;
 	}
 		
 }

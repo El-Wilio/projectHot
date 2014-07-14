@@ -13,12 +13,19 @@
  * -------------------------------------------------------------------------------------|
  *																						|
  ***************************************************************************************/
-class DiscardPile {
+class DiscardPile extends Stack {
 	//attributes
-	
 	
 	function __construct() {
 		
+	}
+	
+	function search() {
+		
+	}
+	
+	function discard($card) {
+		array_push($this->discardPile, $card);	
 	}
 		
 }

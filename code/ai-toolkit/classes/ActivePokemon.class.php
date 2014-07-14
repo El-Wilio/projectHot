@@ -19,6 +19,7 @@
 class ActivePokemon {
 	//attributes
 	
+	var $Pokemon;
 	
 	function __construct() {
 		
