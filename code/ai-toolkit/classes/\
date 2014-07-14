@@ -1,0 +1,77 @@
+<?php
+
+/************************************************************************************** |
+ * Class: 				PokemonCard														|
+ * Date Created: 		2014-07-09														|
+ * Author: 				Chris Barrieau													|
+ *																						|
+ * Model Class																			|
+ * This class represents one Pokemon card. It should have attributes and methods to 	|
+ * allow for any instantiated object to replicate any Pokemon card. 					|
+ *																						|
+ * Modifications will be made accordingly later on in order to allow for compatibility 	|
+ * with previous formats. 																|
+ *																						|
+ * First format allowed: 2014-2015, NXD-ON												|
+ *																						|
+ * Modification History
+ *
+ */
+
+
+class PokemonCard extends Card {
+	//attributes
+
+    private $ability; 
+
+    private $type;
+    private $hp;
+    private $weakness = SplFixedArray(2); //first value is type, second is modifier
+    private $resistance = SplFixedArray(2); //first value is type, second is modifier
+    private $attacks = array(SplFixedArray(5));
+
+	function __construct(string $format, string $name, int $type, int $hp, array $weakness = null, array $resistance = null, ...$attacks) {
+        parent::__construct($format, $name);
+        $this->$type = $type;
+        $this->$hp = $hp;
+        setWeakness($weakness);
+        setResistance($resistance);
+        foreach($attacks as $attack) {
+            setAttack($attack);
+        }  	
+	}
+
+    public function setWeakness(array $weakness) {
+        if(is_null($weakness)) return 0;
+
+        if($weakness[0] < 0 && $weakness[0] > 9) {
+            //out of the energy bound defined in EnergyType.php, should throw error here
+        }
+
+        if(!preg_match('/^*{1}[2]{1}$/', $weakness[1])) {
+            //doesn't match a valid modifier, should throw error here
+        }
+
+	    $this->$weakness = $weakness;
+    }
+
+    public function setResistance(array $resistance) {
+        if(is_null($resistance)) return 0;
+
+        if($resistance[0] < 0 && $resistance[0] > 9) {
+            //out of the energy bound defined in EnergyType.php, should throw error here
+        }
+
+        if(!preg_match('/^-{1}[1-9]{1}0{1}$/', $resistance[1])) {
+            //doesn't match a valid modifier, should throw error here
+        }
+
+	    $this->$resistance = $wresistance;
+    }
+
+    public function setAttack(array $attack) {
+        $this->$attack.push($attack);
+    }
+}
+
+?>
