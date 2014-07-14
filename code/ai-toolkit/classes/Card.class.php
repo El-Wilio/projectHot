@@ -3,7 +3,7 @@
 
 include 'EnergyType.ENUM.php';
 
-class Card {
+abstract class Card {
 	//attributes
 
     private $format;
