@@ -6,10 +6,10 @@ include 'EnergyType.ENUM.php';
 abstract class Card {
 	//attributes
 
-    private $format;
+    private $id;
     private $name;
 	
-	function __construct($format, $name) {
+	function __construct($id, string $name) {
 	    $this->$format = $format;
         $this->$name =$name;
     }

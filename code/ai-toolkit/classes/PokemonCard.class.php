@@ -13,8 +13,8 @@ class PokemonCard extends Card {
 
     //constructor
 
-	function __construct(string $format, string $name, int $type, int $hp, array $weakness = null, array $resistance = null, ...$attacks) {
-        parent::__construct($format, $name);
+	function __construct(string $id, string $name, int $type, int $hp, array $weakness = null, array $resistance = null, ...$attacks) {
+        parent::__construct($id, $name);
         $this->$type = $type;
         $this->$hp = $hp;
         setWeakness($weakness);
