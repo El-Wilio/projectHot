@@ -21,10 +21,17 @@ class ActivePokemon {
 	
 	var $Pokemon;
 	
-	function __construct() {
-		
+	function __construct($Pokemon) {
+		$this->setPokemon($Pokemon);
 	}
-		
+	
+	function setPokemon($Pokemon) {
+		$this->Pokemon = $Pokemon;
+	}
+	
+	function getPokemon() {
+		return $this->Pokemon();	
+	}
 }
 
 ?>
