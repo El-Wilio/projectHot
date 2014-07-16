@@ -6,27 +6,48 @@ include 'EnergyType.ENUM.php';
 abstract class Card {
 	//attributes
 
-    private $id; //unneededd for the toolkit. That's specific to the database.
+    private $set;
+	private $setID;
     private $name;
-	//Missing: Set, set number, rarity
+	private $rarity;
 	
-	function __construct($id, string $name) {
-	    $this->$format = $format;
-        $this->$name =$name;
+	function __construct(string $set = null, string $setID = null, string $name = null,  $rarity = -1) {
+		$this->setSet($set);
+		$this->setSetID($setID);
+        $this->setName($name);
+		$this->setRarity($rarity);
     }
 
-    public function getFormat() {
-        return $this->$format
-    }
+   function setSet($set) {
+	   $this->set = $set;
+   }
+   
+   function getSet() {
+	   return $this->set;
+   }
+   
+   	function setSetID($setID) {
+		$this->setID = $setID;
+	}
 	
-    public function getName() {
-        return $this->name
-    }
-
-    public function setFormat($format) {
-        $this->$format = $format;
-        $this->$name = $name;
-    }
+	function getSetID() {
+		return $this->setID;
+	}
+	
+   function getName() {
+        return $this->name;
+   }
+   
+   function setName($name) {
+	   $this->name = $name;
+   }
+   
+   function getRarity() {
+	   return $this->rarity;
+   }
+   
+   function setRarity($rarity) {
+	   $this->rarity = $rarity;  
 		
 }
 
