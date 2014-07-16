@@ -11,10 +11,4 @@
  * Programmer		|	Date		|	Details											|
  * -------------------------------------------------------------------------------------|
  *																						|
- ***************************************************************************************/
- 
- function say(output) {
-	//alert("test " + output);
-	document.getElementById('terminal-content-div').innerHTML += "Test";
-	document.getElementById('txtTerminalUserInput').text('');
- }
+***************************************************************************************/

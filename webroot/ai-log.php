@@ -25,18 +25,20 @@
     <script type="text/javascript">
     function parseCommand(e) {
 		if(e.keyCode == 13) {
-			//alert(e.keyCode);
-			say("enter pressed!");
-			command = document.getElementById('txtTerminalUserInput').getText();
-			submitCommand(command);
+			command = document.getElementById('txtTerminalUserInput').text;
+			say(submitCommand(command));
 		}
 	}
 	
 	function say(output) {
-		document.getElementById('terminal-content-div').innerHTML += output;
-		document.getElementById('txtTerminalUserInput').value('');
+		document.getElementById('terminal-content').innerHTML += output;
+		document.getElementById('txtTerminalUserInput').value = "";
 	}
-	
+
+	function submitCommand(command) {
+		var output = command;
+		return output;
+	} 
 	
     </script>
 </head>
@@ -50,6 +52,7 @@
         <div class="terminal-content" id="terminal-content-div">
 		<?php		
         	include('../code/ai-toolkit/start-ai-arcanine.php');
+			
         ?>
         </div>
         <div class="terminal-user-input">
