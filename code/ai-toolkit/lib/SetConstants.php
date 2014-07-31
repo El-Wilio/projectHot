@@ -1,4 +1,3 @@
-<?php
 
 namespace Set;
 
@@ -45,21 +44,21 @@ define(__NAMESPACE__."_40", "Rising Rivals");
 define(__NAMESPACE__."_41", "Supreme Victors");
 define(__NAMESPACE__."_42", "Arceus");
 define(__NAMESPACE__."_43", "HeartGold & SoulSilver");
-define(__NAMESPACE__."_44", "Unleashed")
-define(__NAMESPACE__."_45", "Undaunted")
-define(__NAMESPACE__."_46", "Triumphant")
-define(__NAMESPACE__."_47", "Call of Legends")
-define(__NAMESPACE__."_48", "Black & White")
-define(__NAMESPACE__."_49", "Emerging Powers")
-define(__NAMESPACE__."_50", "Noble Victories")
-define(__NAMESPACE__."_51", "Next Destinies")
-define(__NAMESPACE__."_52", "Dark Explorers")
-define(__NAMESPACE__."_53", "Dragon Exalted")
-define(__NAMESPACE__."_54", "Boundaries Crossed")
-define(__NAMESPACE__."_55", "Plasma Storm")
-define(__NAMESPACE__."_56", "Plasma Freeze")
-define(__NAMESPACE__."_57", "Plasma Blast")
-define(__NAMESPACE__."_58", "Legendary Treasures")
-define(__NAMESPACE__."_59", "XY")
-define(__NAMESPACE__."_60", "Flashfire")
-define(__NAMESPACE__."_61", "Furious Fists")
+define(__NAMESPACE__."_44", "Unleashed");
+define(__NAMESPACE__."_45", "Undaunted");
+define(__NAMESPACE__."_46", "Triumphant");
+define(__NAMESPACE__."_47", "Call of Legends");
+define(__NAMESPACE__."_48", "Black & White");
+define(__NAMESPACE__."_49", "Emerging Powers");
+define(__NAMESPACE__."_50", "Noble Victories");
+define(__NAMESPACE__."_51", "Next Destinies");
+define(__NAMESPACE__."_52", "Dark Explorers");
+define(__NAMESPACE__."_53", "Dragon Exalted");
+define(__NAMESPACE__."_54", "Boundaries Crossed");
+define(__NAMESPACE__."_55", "Plasma Storm");
+define(__NAMESPACE__."_56", "Plasma Freeze");
+define(__NAMESPACE__."_57", "Plasma Blast");
+define(__NAMESPACE__."_58", "Legendary Treasures");
+define(__NAMESPACE__."_59", "XY");
+define(__NAMESPACE__."_60", "Flashfire");
+define(__NAMESPACE__."_61", "Furious Fists");
