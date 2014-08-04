@@ -14,7 +14,7 @@
  *																						|
  ***************************************************************************************/
 -->
-<?php
+<?php 
 	include('lib/AIArcanine.lib.php');
 	include('classes/AIArcanine.class.php');
 	$aiArcanine = New AIArcanine();

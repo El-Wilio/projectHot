@@ -23,11 +23,6 @@ class AIArcanine {
 	function __construct() {
 		say("projectHot - AI Toolkit - Arcanine-Branch - pre-Alpha AI");
 		say("current Build: 0.1");
-		
-		//Test overflow styling 
-		//for($x = 0; $x < 250; $x++) {
-		//	say($x . " - testing ");
-		//}
 	}
 	
 	//accessors

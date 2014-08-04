@@ -25,13 +25,14 @@
     function parseCommand(e) {
 		if(e.keyCode == 13) {
 			command = document.getElementById('txtTerminalUserInput').value;
-			say(submitCommand(command));
+			test = submitCommand(command);
+			say(test);
 		}
 	}
 	
 	//Adds the output of the command to the console log
 	function say(output) {
-		document.getElementById('terminal-content').innerHTML += output;
+		document.getElementById('terminal-content-div').innerHTML += output + String.fromCharCode(13);
 		document.getElementById('txtTerminalUserInput').value = "";
 	}
 
