@@ -5,7 +5,6 @@
  * Author: 				Chris Barrieau													|
  *																						|
  * [Root] View file - Development/Testing - For Early AI Development					|
- * This class represents the active pokemon spot on the playing field.					|
  *																						|
  * This file is intended as a testing file and simulated in-browser log for the early 	|
  * development of the Pokemon TCG AI. 													|
@@ -25,16 +24,18 @@
     <script type="text/javascript">
     function parseCommand(e) {
 		if(e.keyCode == 13) {
-			command = document.getElementById('txtTerminalUserInput').text;
+			command = document.getElementById('txtTerminalUserInput').value;
 			say(submitCommand(command));
 		}
 	}
 	
+	//Adds the output of the command to the console log
 	function say(output) {
 		document.getElementById('terminal-content').innerHTML += output;
 		document.getElementById('txtTerminalUserInput').value = "";
 	}
 
+	//Will separate command from parameters and perform validation here
 	function submitCommand(command) {
 		var output = command;
 		return output;
