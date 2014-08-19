@@ -20,28 +20,37 @@
 	<title>projectHot - Ai-Log</title>
 	<link href="styles/ai-arcanine.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../code/ai-toolkit/lib/AIArcanine.lib.js"></script>
+    <script type="text/javascript" src="/scripts/AIArcanine.lib.js"></script>
     <script type="text/javascript">
     function parseCommand(e) {
 		if(e.keyCode == 13) {
-			command = document.getElementById('txtTerminalUserInput').value;
-			test = submitCommand(command);
-			say(test);
+			//Get command
+			var command = document.getElementById('txtTerminalUserInput').value.trim();
+			if(command.indexOf(" ") > -1) {				
+				var commandName = command.substring(0, command.indexOf(" "));
+				say("Command Name: " + commandName);
+				command = removeFirst(command);
+				say("Parameters: " + command);
+				
+				var params = { };
+				var x = 0;
+				
+				while(command.indexOf(" ") > -1) {
+					params[x] = command.substring(0, command.indexOf(" "));
+					command = removeFirst(command);
+					x++;
+				}
+				params[x] = command.trim();
+			}
+			var output = submitFunction(commandName, params);
 		}
 	}
 	
 	//Adds the output of the command to the console log
 	function say(output) {
-		document.getElementById('terminal-content-div').innerHTML += output + String.fromCharCode(13);
+		document.getElementById('terminal-content-div').innerHTML += "<p>" + output + "</p>";
 		document.getElementById('txtTerminalUserInput').value = "";
 	}
-
-	//Will separate command from parameters and perform validation here
-	function submitCommand(command) {
-		var output = command;
-		return output;
-	} 
-	
     </script>
 </head>
 <body>

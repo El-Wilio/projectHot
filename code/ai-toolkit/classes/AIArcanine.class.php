@@ -23,6 +23,7 @@ class AIArcanine {
 	function __construct() {
 		say("projectHot - AI Toolkit - Arcanine-Branch - pre-Alpha AI");
 		say("current Build: 0.1");
+		
 	}
 	
 	//accessors
